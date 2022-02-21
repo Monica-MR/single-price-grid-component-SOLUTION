@@ -1,0 +1,120 @@
+:root{
+    --cyan:hsl(179, 62%, 43%);
+    --brightYellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+    --fontSize: 16px;
+    --mainFont: 'Karla', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+body{
+    font-size: var(--fontSize);
+    font-family: var(--mainFont);
+    height: 100vh;
+}
+h1{
+    color: var(--cyan);
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+/*CODE*/
+.container{
+    height: 100vh;
+}
+.header,
+.services,
+.subscription{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.header__subtitle{
+    color: var(--brightYellow);
+    font-size: 1.4rem;
+}
+.header__info{
+    color: var(--grayishBlue);
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+@media screen and (min-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .header{
+        grid-column: 1 / 3;
+    }
+    .header,
+    .services,
+    .subscription{
+        padding: 2rem 5rem 2.5rem 5rem;
+    }
+    .header__title{
+        font-size: 3rem;
+    }
+    .header__subtitle{
+        font-size: 2.2rem;
+        margin-bottom: .5rem;
+    }
+    .header__info{
+        margin-top:0 ;
+        font-size: 2rem;
+        max-width: 80%;
+        line-height: 1.3;
+    }
+}
+.subscription{
+    background-color: var(--cyan);
+}
+.subscription__price{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:white;
+    margin-bottom: 0;
+}
+.subscription__price span{
+    font-size: 1rem;
+    padding-left: .8rem;
+    font-weight: 400;
+    opacity: .6;
+}
+.subscription p{
+    font-size: 1.2rem;
+}
+.subscription__buttom{
+    background-color: var(--brightYellow);
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin: 2rem 0 1.5rem;
+    font-size: 1.2rem;
+    -webkit-box-shadow: 12px 13px 31px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 13px 31px -17px rgba(0,0,0,0.75);
+    box-shadow: 12px 13px 31px -17px rgba(0,0,0,0.75);
+}
+@media screen and (min-width:768px){
+    .subscription__price span{
+        font-size: 1.5rem;
+    }
+    .services p{
+        font-size: 1.4rem;
+    }
+}
+.services{
+    background-color:hsl(179, 51%, 50%);
+}
+.services p{
+    opacity: .7;
+    line-height: .4;
+}
